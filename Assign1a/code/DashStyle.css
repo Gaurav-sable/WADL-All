@@ -1,0 +1,332 @@
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.sidebar{
+    position: fixed;
+    background-color: rgb(112, 112, 197);
+    height: 100%;
+    width: 250px;
+    transition: 300ms;
+    z-index: 100000;
+}
+.brand{
+    padding: 1.5rem 0rem;
+    background-color: rgb(38, 143, 99);
+    align-items: center;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+}
+.brand span{
+    color: gold;
+}
+.brand div{
+    color: white;
+}
+.sidemenu{
+    padding-top: 1.5rem;
+    padding-right: 1.5rem;
+}
+.sidemenu li{
+    width: 100%;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: auto;
+}
+.sidemenu a{
+    color: pink;
+    text-decoration: none;
+    font-size: 20px;
+}
+.active{
+    background-color: green;
+    border-radius: 10px;
+}
+.content{
+    margin-left: 250px;
+    min-height: 100vh;
+}
+header{
+    height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(58, 58, 176);
+    top: 0; 
+    position: sticky; 
+    z-index: 10000;
+}
+.menu{
+    background-color: black;
+    color: gold;
+    margin-left: 1.5rem;
+    height: 30px;
+    width: 30px;
+    display: grid;
+    place-content: center;
+    border-radius: 5px;
+    font-size: 25px;
+}
+.exmenu{
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 1.5rem;
+    display: grid;
+    place-content: center;
+    font-size: 25px;
+}
+.rightmenu {
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    background-color: aqua;
+    top: 78px;
+    right: -100%;
+    display: block;
+    transition: 300ms;
+}
+.rightmenu ul{
+    margin: 0;
+    width: 100%;
+}
+.rightmenu li{
+    width: 100%;
+    margin-top: 1.5rem;
+}
+.rightmenu img{
+    width: 90px;
+    height: 90px;
+    margin-left: 22px;
+}
+.rightmenu h6{
+    margin-left: 40px;
+    color: rgb(33, 28, 2);
+}
+.rightmenu button{
+    margin-left: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 2px;
+    color: blue;
+}
+.rightmenu span{
+    font-size: 20px;
+    color: rgb(217, 40, 70);
+}
+.rightmenu span input{
+    height: 25px;
+    width: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: transparent;
+    padding: 1rem;
+    padding-right: 0;
+    font-size: 15px  !important;
+}
+#right-toggle{
+    display: none;
+} 
+#right-toggle:checked ~ .rightmenu{
+    right: 0;
+} 
+#menu-toggle{
+    display: none;
+}
+#searchbar{
+    width: 100px;
+}
+.main-content{
+    background-color: #c3a1a1;
+    height:100%;
+    overflow: auto;
+}
+.cards{
+    margin: 50px 25px 50px 25px;
+}
+.notices{
+    width: 80%;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    border: 5px solid black;
+    margin: auto;
+}
+.notices li{
+    color: red;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 12px;
+    list-style-type: disc;
+}
+.tt{
+    width: 80%;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+}
+.cal img{
+    width: 100%;
+    height: 390px;
+}
+@media only screen and (min-width: 916px) {
+    .row-2 {
+        display: flex;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .notices{
+        width: 55%;
+    }
+
+    .tt{
+        width: 30%;
+        margin-top: 0;
+    }
+}
+.head{
+    width: 100%;
+}
+.head h3{
+    padding-top: 10px;
+    padding-left: 10px;
+    color: red;
+}
+.chart-grid{
+    margin-top: 50px;
+}
+.chart-follow{
+    width: 80%;
+    background-color: black;
+    padding: 1rem;
+    margin: auto;
+}
+.chart-sales{
+    width: 80%;
+    background-color: black;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 50px;
+}
+.chart-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #222;
+    margin-bottom: 1rem;
+}
+@media only screen and (min-width: 916px){
+    .chart-grid{
+        display: flex;
+        margin-bottom: 50px;
+    }
+    .chart-follow{
+        width: 55%;
+        background-color: black;
+        padding: 1rem;
+        margin: auto;
+    }
+    .chart-sales{
+        margin-top: 0;
+        width: 30%;
+        background-color: black;
+        padding: 1rem;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 733px){
+    .sidebar{
+        left: -250px;
+    }
+    .content{
+        margin-left: 0;
+    }
+}
+/* ------------------------------------------------------------ */
+.row{
+    margin: auto;
+    margin: 50px 0px 0px 0px;
+}
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,0.1), 0 0.9375rem 1.40625rem rgba(90,97,105,0.1), 0 0.25rem 0.53125rem rgba(90,97,105,0.12), 0 0.125rem 0.1875rem rgba(90,97,105,0.1);
+}
+.l-bg-cherry {
+    background: linear-gradient(to right, #493240, #f09) !important;
+    color: #fff;
+}
+.l-bg-blue-dark {
+    background: linear-gradient(to right, #373b44, #4286f4) !important;
+    color: #fff;
+}
+.l-bg-green-dark {
+    background: linear-gradient(to right, #0a504a, #38ef7d) !important;
+    color: #fff;
+}
+.l-bg-orange-dark {
+    background: linear-gradient(to right, #a86008, #ffba56) !important;
+    color: #fff;
+}
+.card .card-statistic-3 .card-icon-large .fas, .card .card-statistic-3 .card-icon-large .far, .card .card-statistic-3 .card-icon-large .fab, .card .card-statistic-3 .card-icon-large .fal {
+    font-size: 110px;
+}
+.card .card-statistic-3 .card-icon {
+    text-align: center;
+    line-height: 50px;
+    margin-left: 15px;
+    color: #000;
+    position: absolute;
+    right: -5px;
+    top: 20px;
+    opacity: 0.1;
+}
+.l-bg-cyan {
+    background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+    color: #fff;
+}
+.l-bg-green {
+    background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%) !important;
+    color: #fff;
+}
+.l-bg-orange {
+    background: linear-gradient(to right, #f9900e, #ffba56) !important;
+    color: #fff;
+}
+.l-bg-cyan {
+    background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+    color: #fff;
+}
+#menu-toggle:checked ~ .sidebar{
+    left: 0;
+}
+#menu-toggle:checked .sidebar{
+    transition: .4s;
+}
+.close-mobile-menu{
+    position: fixed;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    display: block;
+    height: 100%;
+    width: calc(100% - 250px);
+    background-color: transparent;
+    z-index: 10000;
+}
+#menu-toggle:checked ~ .close-mobile-menu{
+    right: 0;
+}
